@@ -1,0 +1,89 @@
+/*
+
+欢迎查看源代码。指点批评、合作联络 q780309206
+
+*/
+
+*{margin:0;outline:0}
+body{font-size:12pt;background:#27E0C7}
+a{text-decoration:none}
+*::selection{background:#0A5A50CA;color:#50FFEE}
+
+
+/* 棋盘 */
+@font-face {
+    font-family: 'belligerent';
+    src: url('belligerent-webfont.eot');
+    src: url('belligerent-webfont.eot?#iefix') format('embedded-opentype'),
+         url('belligerent-webfont.woff') format('woff'),
+         url('belligerent-webfont.ttf') format('truetype');
+    font-weight: normal; font-style: normal;
+}
+
+#body{width:100%;height:100%;display:flex;flex-direction:column}
+h1{
+  padding:0;margin:1rem auto;
+  font-size:2rem;
+  line-height:1;
+}
+.board{
+  margin:0 auto 7rem; padding: 36pt;
+  display:flex;flex-direction: column;
+  background:#fffc;
+  border-radius: 18pt;
+}
+main{
+  background:#333e;user-select:none;
+  display: flex; flex-direction: column; flex-wrap: wrap;
+  justify-content:space-between;
+  width:50vh;aspect-ratio:1/1;
+  border-radius:36%;
+}
+main div{
+  width:100%;margin:0;
+  display: flex; flex-direction: row;
+  justify-content:space-between;
+}
+i{
+  display:flex;
+  background:rgba(212,249,244,100);margin:0;padding-left:-9%;
+  width: calc(50vh / 3 - 3pt);aspect-ratio:1/1;
+}
+i span{
+  width:99%;height:100%;
+  display:block;margin:auto;
+  font-size:calc(50vh / 3 - 2rem);font-family:'belligerent';
+  text-align:center; vertical-align:middle;
+  opacity:0;
+  cursor:cell;/*no-drop*/
+}
+#s1,#n1{border-radius:50% 0 0 0;}#s3,#n3{border-radius:0 50% 0 0;}#s9,#n9{border-radius:0 0 50% 0;}#s7,#n7{border-radius:0 0 0 50%;}
+
+button{margin:9pt;padding:3pt 3vw;font-size:1rem;line-height:1;border-radius:9pt;cursor:pointer;background:#fff}
+button:hover{background:#7CEEE5}button:active{background:#ccc}
+section{
+  display:none;justify-content:space-around;
+  position:fixed;z-index:2;
+  width:357px;height:80px; top:39%;left:calc(50% - 353px/2 - 27pt);
+  background:#eee;padding:27pt;border-radius:99pt}
+section button{padding:9pt 3rem;margin:auto}
+button span{font-family:'belligerent';font-size:21pt}
+#cov{display:none;position:fixed;top:-1px;left:-1px;width:200vw;height:200vh;z-index:1;background:#7777}
+
+hr{width:81%;margin:1pt auto 3pt;}h2{margin:auto}
+#buts,aside{display:flex;flex-direction:row;margin:auto}
+aside{width:72%;justify-content:space-evenly;margin-top:9pt}
+aside div{
+  width:30%; padding:5pt 7pt 12pt; border-radius: 18pt;
+  background-color:#7CEEE5;
+  text-align: center;
+}
+h3{font-family:'belligerent';font-size:2rem; user-select:none}
+div p{font-weight: bold;font-family: serif; font-size:16pt}
+
+
+/* f */
+footer{position:fixed;z-index:9;bottom:0; display:flex;justify-content:center;align-items:center;width:100vw;height:6rem; background:#111;user-select:none;font-size:9pt}
+footer cite{color:#aaa;font-size:7pt}
+footer a{transition:color .2s ease;color:#fffe} footer a:hover{color:#25cfb7;border-radius:999pt}
+footer p{display:block; font-size:9pt;line-height:2; color:#aaa; text-align: center;}
